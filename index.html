@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Câmbio Automático - Especialista em Manutenção e Óleo de Câmbio em SP</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Rajdhani for Automotive Tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0A0A0C',
+                            dark: '#121216',
+                            card: '#1A1A22',
+                            border: '#2A2A36',
+                            orange: '#FF6600',
+                            orangeHover: '#E05500',
+                            orangeLight: '#FF8533',
+                            orangeGlow: 'rgba(255, 102, 0, 0.25)',
+                            gold: '#F59E0B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and ambient visual effects */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF6600;
+            border-radius: 4px;
+        }
+        .orange-gradient-text {
+            background: linear-gradient(135deg, #FF8533 0%, #FF6600 50%, #E05500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .orange-btn-gradient {
+            background: linear-gradient(135deg, #FF7714 0%, #FF6600 50%, #D95300 100%);
+            transition: all 0.3s ease;
+        }
+        .orange-btn-gradient:hover {
+            background: linear-gradient(135deg, #FF8829 0%, #FF7714 50%, #E05500 100%);
+            box-shadow: 0 0 20px rgba(255, 102, 0, 0.4);
+        }
+        .hero-pattern {
+            background-color: #0A0A0C;
+            background-image: radial-gradient(rgba(255, 102, 0, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .glass-card {
+            background: rgba(26, 26, 34, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 102, 0, 0.15);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 102, 0, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(255, 102, 0, 0.15);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 102, 0, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 102, 0, 0.8); }
+        }
+        .pulse-whatsapp {
+            animation: pulseGlow 2.5s infinite;
+        }
+        .img-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-gray-100 font-sans antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- HEADER NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300" id="main-navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#hero" class="flex items-center group h-full py-2">
+                <img src="Seven Automatic Transmission Racing Logo.png" alt="Seven Câmbio Automático Logo" class="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(255,102,0,0.3)] filter brightness-110">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#hero" class="text-gray-300 hover:text-brand-orange transition-colors">Início</a>
+                <a href="#sobre" class="text-gray-300 hover:text-brand-orange transition-colors">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-300 hover:text-brand-orange transition-colors">Serviços</a>
+                <a href="#diferenciais" class="text-gray-300 hover:text-brand-orange transition-colors">Diferenciais</a>
+                <a href="#depoimentos" class="text-gray-300 hover:text-brand-orange transition-colors">Depoimentos</a>
+                <a href="#localizacao" class="text-gray-300 hover:text-brand-orange transition-colors">Contato & Local</a>
+            </nav>
+
+            <!-- Quick Action CTA -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:+5511967871641" class="text-xs font-semibold text-gray-300 hover:text-white flex items-center gap-2 px-3 py-2 rounded-lg bg-brand-card border border-brand-border hover:border-brand-orange/40 transition">
+                    <i class="fa-solid fa-phone text-brand-orange"></i>
+                    (11) 96787-1641
+                </a>
+                <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Seven%20C%C3%A2mbio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="orange-btn-gradient text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    ORÇAMENTO RÁPIDO
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-300 hover:text-brand-orange focus:outline-none" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Início</a>
+            <a href="#sobre" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Sobre Nós</a>
+            <a href="#servicos" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Serviços</a>
+            <a href="#diferenciais" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Depoimentos</a>
+            <a href="#localizacao" class="mobile-link block py-2.5 px-3 rounded-lg hover:bg-brand-card text-gray-200 hover:text-brand-orange font-medium">Contato & Localização</a>
+            <div class="pt-3 border-t border-brand-border flex flex-col gap-2">
+                <a href="tel:+5511967871641" class="w-full py-2.5 rounded-xl bg-brand-card border border-brand-border text-center font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-orange"></i> (11) 96787-1641
+                </a>
+                <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Seven%20C%C3%A2mbio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="w-full orange-btn-gradient text-white py-3 rounded-xl font-bold text-center text-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-28 lg:pt-36 pb-20 hero-pattern overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Glow Orbs in background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-10 right-10 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card/80 backdrop-blur-sm border border-brand-orange/30 text-xs font-semibold text-gray-300 shadow-lg">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-white font-bold">4.5</span>
+                        <span class="text-gray-400">(83 avaliações no Google)</span>
+                        <span class="hidden sm:inline-block text-brand-orange font-semibold">• Guaianases, SP</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="font-tech text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight drop-shadow-lg">
+                        Seu Câmbio Automático em <span class="orange-gradient-text">Boas Mãos</span> e sem Surpresas.
+                    </h1>
+
+                    <!-- Paragraph description -->
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-md">
+                        Especialistas em diagnóstico computadorizado, troca de fluido por máquina (flushing) e manutenção preventiva e corretiva de transmissões automáticas. Transparência total, preço justo e sem inventar defeito.
+                    </p>
+
+                    <!-- Trust Points Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-brand-card/70 backdrop-blur-sm border border-brand-border/50 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                            <span class="text-xs font-medium text-gray-200">Preço Sem "Mimimi"</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-brand-card/70 backdrop-blur-sm border border-brand-border/50 shadow-sm">
+                            <i class="fa-solid fa-microchip text-brand-orange"></i>
+                            <span class="text-xs font-medium text-gray-200">Scanner Original</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-brand-card/70 backdrop-blur-sm border border-brand-border/50 col-span-2 sm:col-span-1 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-brand-orange"></i>
+                            <span class="text-xs font-medium text-gray-200">Garantia de Serviço</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20c%C3%A2mbio." target="_blank" class="w-full sm:w-auto orange-btn-gradient text-white text-base font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-orange/20 flex items-center justify-center gap-3 group">
+                            <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+                            SOLICITAR ANÁLISE / ORÇAMENTO
+                        </a>
+                        <a href="#servicos" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-brand-card/80 backdrop-blur-sm border border-brand-border hover:border-brand-orange/50 text-gray-200 hover:text-white font-semibold text-base transition text-center shadow-lg">
+                            Ver Nossos Serviços
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero: Interactive Quick Diagnostic Wizard Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl relative shadow-2xl border-brand-orange/20">
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-brand-orange to-amber-500 text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-lg">
+                            Assistente Virtual
+                        </div>
+
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-brand-orange"></i>
+                            Pré-Diagnóstico Rápido
+                        </h3>
+                        <p class="text-xs text-gray-400 mb-6">
+                            Selecione os dados do seu veículo e receba uma orientação inicial direto no WhatsApp.
+                        </p>
+
+                        <form id="wizard-form" class="space-y-4">
+                            <!-- Step 1: Vehicle Brand -->
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gray-300 mb-1.5">Marca do Veículo</label>
+                                <select id="wizard-brand" class="w-full bg-brand-dark/90 border border-brand-border rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-brand-orange transition">
+                                    <option value="Peugeot / Citroën">Peugeot / Citroën (AL4, AT8, EAT6)</option>
+                                    <option value="Renault">Renault (DP0, DP2, Duster, Sandero)</option>
+                                    <option value="Honda">Honda (Fit, Civic, HR-V - CVT / Automático)</option>
+                                    <option value="Toyota">Toyota (Corolla, Yaris - CVT / Automático)</option>
+                                    <option value="Volkswagen">Volkswagen (Tiptronic, DSG, AQ250)</option>
+                                    <option value="Fiat">Fiat (Dualogic, 6 marchas, CVT)</option>
+                                    <option value="Ford">Ford (PowerShift, 6F35, Fusion)</option>
+                                    <option value="Chevrolet">Chevrolet (6T30, 6T40, Spin, Onix, Cruze)</option>
+                                    <option value="Outra Marca">Outra Marca / Importado</option>
+                                </select>
+                            </div>
+
+                            <!-- Step 2: Main Symptom -->
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gray-300 mb-1.5">Sintoma Principal Percebido</label>
+                                <select id="wizard-symptom" class="w-full bg-brand-dark/90 border border-brand-border rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-brand-orange transition">
+                                    <option value="Tranco ao engatar Rê ou Drive">Tranco forte ao engatar Ré (R) ou Drive (D)</option>
+                                    <option value="Aviso no Painel (Verificar Câmbio)">Aviso / Luz de falha de Câmbio no painel</option>
+                                    <option value="Patinando / Carro perde força">Giro do motor sobe mas carro patina / não anda</option>
+                                    <option value="Atraso nas Trocas de Marcha">Atraso ou demora excessiva para trocar marcha</option>
+                                    <option value="Ruído ou Barulho Estranho">Barulho / Zunido vindo da caixa de câmbio</option>
+                                    <option value="Troca Preventiva de Óleo">Quero fazer Troca Preventiva de Óleo (Flushing)</option>
+                                </select>
+                            </div>
+
+                            <!-- Step 3: Year/Model optional -->
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-gray-300 mb-1.5">Modelo e Ano (Opcional)</label>
+                                <input type="text" id="wizard-model" placeholder="Ex: Peugeot 307 2.0 - 2010" class="w-full bg-brand-dark/90 border border-brand-border rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-brand-orange transition placeholder:text-gray-600">
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="button" onclick="sendWizardToWhatsApp()" class="w-full orange-btn-gradient text-white py-3.5 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2 mt-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                CONSULTAR PELO WHATSAPP
+                            </button>
+                        </form>
+
+                        <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-[11px] text-gray-400">
+                            <span><i class="fa-solid fa-clock text-brand-orange mr-1"></i> Resposta rápida no horário comercial</span>
+                            <span class="text-green-400 font-semibold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Oficina Aberta</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS SECTION -->
+    <section id="sobre" class="py-20 bg-brand-dark border-t border-b border-brand-border/50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Graphic Image / Badge Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card shadow-2xl group">
+                        <!-- Decorative background glow -->
+                        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-brand-orange/20 rounded-full blur-2xl z-0 transition-all duration-500 group-hover:bg-brand-orange/30"></div>
+                        
+                        <!-- Using fluidos-oficina.webp to show structure and organization -->
+                        <div class="relative h-64 sm:h-80 w-full overflow-hidden img-mask z-10">
+                            <img src="fluidos-oficina.webp" alt="Estrutura e Estoque de Fluidos Seven Câmbio" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/40 to-transparent"></div>
+                        </div>
+
+                        <div class="relative z-20 p-6 sm:p-8 text-center -mt-16">
+                             <div class="w-20 h-20 mx-auto rounded-2xl bg-brand-card border-2 border-brand-orange flex items-center justify-center text-brand-orange text-4xl mb-4 shadow-[0_0_20px_rgba(255,102,0,0.3)]">
+                                <i class="fa-solid fa-wrench"></i>
+                            </div>
+
+                            <h3 class="font-tech text-3xl font-bold text-white mb-1">SEVEN CÂMBIO</h3>
+                            <p class="text-brand-orange font-semibold text-sm mb-4">Referência em Guaianases e Zona Leste</p>
+
+                            <p class="text-xs text-gray-300 leading-relaxed mb-6 italic">
+                                "Acolhemos nossos clientes com atenção total, ouvindo cada detalhe antes de dar qualquer parecer técnico. Aqui você conversa direto com quem resolve."
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-4 text-left border-t border-brand-border/60 pt-6">
+                                <div>
+                                    <span class="font-tech text-3xl font-extrabold text-white block leading-none">100%</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-semibold mt-1 block">Transparência</span>
+                                </div>
+                                <div>
+                                    <span class="font-tech text-3xl font-extrabold text-brand-orange block leading-none">4.5 <i class="fa-solid fa-star text-sm mb-1"></i></span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-semibold mt-1 block">Avaliação Média</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Inclusive Badge from Google Profile -->
+                            <div class="mt-6 pt-4 border-t border-brand-border/40 flex items-center justify-center gap-2 text-xs text-gray-400">
+                                <i class="fa-solid fa-heart text-brand-orange"></i> Empresa que acolhe a comunidade LGBTQ+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-brand-orange font-tech text-lg tracking-widest font-bold uppercase block">Quem Somos</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold font-tech text-white uppercase tracking-tight mt-1">
+                            Atenção Dedicada, Respeito ao Cliente e Mão de Obra de Alta Precisão
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        A <strong class="text-white">Seven Câmbio Automático</strong> nasceu com um propósito claro: eliminar o receio que donos de veículos automáticos têm de levar o carro à oficina. Sabemos que problemas de câmbio costumam gerar orçamentos abusivos e diagnósticos confusos.
+                    </p>
+
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Na nossa oficina em Guaianases, trabalhamos com <strong>clareza cristalina</strong>. Se o seu carro precisa apenas de uma limpeza de solenoides, regulagem do módulo ou troca de fluido por máquina, é exatamente isso que será feito e cobrado. Nada de "inventar histórias" ou trocar peças desnecessárias.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-orange/20 border border-brand-orange/30 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-white">Especialistas em Linha Francesa, Asiática e Nacional</h4>
+                                <p class="text-sm text-gray-400 mt-1">Ampla experiência com sistemas AL4/DP0 (Peugeot, Citroën, Renault), CVTs (Honda, Nissan, Toyota), Dualogic, PowerShift e Câmbios de 6 e 8 marchas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-orange/20 border border-brand-orange/30 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-white">Atendimento Direto com os Proprietários</h4>
+                                <p class="text-sm text-gray-400 mt-1">Acompanhamento de perto em cada etapa da manutenção, com fotos e vídeos explicativos do serviço sendo realizado no seu carro.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-orange/20 border border-brand-orange/30 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-white">Orçamento Justo e sem Surpresas</h4>
+                                <p class="text-sm text-gray-400 mt-1">Preços competitivos com garantia estendida e facilidade nas condições de pagamento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20mecanico%20especialista." target="_blank" class="inline-flex items-center gap-2 text-brand-orange font-bold hover:text-white transition-colors group text-lg">
+                            <span>Falar diretamente com nosso técnico especializado</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS SECTION -->
+    <section id="servicos" class="py-20 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-orange font-tech text-lg tracking-widest font-bold uppercase">Soluções Completas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-tech text-white uppercase tracking-tight">
+                    Nossos Serviços Especializados
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Utilizamos equipamentos modernos e procedimentos recomendados pelas montadoras para garantir máxima vida útil e suavidade às trocas do seu veículo.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Troca de Óleo por Maquina (Flushing) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-oil-can"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Troca 100% de Óleo (Flushing)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Substituição completa do fluido do câmbio automático através de máquina computadorizada. Elimina resíduos, borras e garante proteção total das engrenagens.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Troca 100% do volume do fluido</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Limpeza interna de resíduos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Fluido especificado por montadora</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Quero%20cotar%20a%20Troca%20de%20%C3%93leo%20do%20C%C3%A2mbio%20(Flushing)." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        COTAR TROCA DE ÓLEO
+                    </a>
+                </div>
+
+                <!-- Service 2: Diagnostico Computadorizado HD -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Diagnóstico Eletrônico HD</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Aferição detalhada de parâmetros elétricos, pressão hidráulica, temperatura e códigos de falha armazenados na Central Eletrônica da transmissão.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Leitura de códigos DTC e relatórios</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Teste de solenoide e sensores</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Adaptação e reset de parâmetros</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Preciso%20de%20um%20Diagn%C3%B3stico%20Computadorizado%20no%20meu%20c%C3%A2mbio." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        AGENDAR DIAGNÓSTICO
+                    </a>
+                </div>
+
+                <!-- Service 3: Reparo em Corpo de Válvulas e Solenoides -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Corpo de Válvulas & Mecatrônica</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Manutenção corretiva do "cérebro" do câmbio. Substituição de solenoides de pressão, vedações, reparo de acumuladores e limpeza cirúrgica das galerias.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Solução para trancos em AL4 e CVT</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Troca de eletroválvulas BorgWarner</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Teste de bancada e estanqueidade</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7amento%20para%20reparo%20no%20Corpo%20de%20V%C3%A1lvulas." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        SOLICITAR AVALIAÇÃO
+                    </a>
+                </div>
+
+                <!-- Service 4: Reconstrução Completa de Câmbio -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Reconstrução Completa / Overhaul</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Desmontagem integral da caixa de marcha para substituição do kit master de juntas, discos de composite, pistões e rolamentos danificados.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Retífica completa da caixa de câmbio</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Discos de fricção novos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Garantia estendida de serviço</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20Overhaul/Reconstru%C3%A7%C3%A3o%20de%20C%C3%A2mbio." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        RECONSTRUÇÃO DE CÂMBIO
+                    </a>
+                </div>
+
+                <!-- Service 5: Conversor de Torque -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-circle-notch"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Conversor de Torque</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Recondicionamento do conversor de torque para sanar vibrações ("trepidação"), superaquecimento do óleo ou ausência de tração ao acelerar.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Troca de disco de Lock-up e vedações</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Balanceamento dinâmico de precisão</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Eliminação de patinação nas saídas</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Meu%20carro%20est%C3%A1%20trepidando,%20gostaria%20de%20ver%20o%20Conversor%20de%20Torque." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        CONSULTAR CONVERSOR
+                    </a>
+                </div>
+
+                <!-- Service 6: Linha Peugeot, Citroën e Renault AL4/DP0 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl group-hover:bg-brand-orange/10 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <h3 class="font-tech text-2xl font-bold text-white mb-2">Especialistas em Peugeot, Renault & Citroën</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                            Atendimento especializado para problemas conhecidos de câmbio AL4 / DP0 / DP2 (Duster, Oroch, 307, C4, Megane, Sandero). Solução definitiva por valor acessível.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Fim dos trancos na ré e em 3ª marcha</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Orçamentos até a metade do valor da concorrência</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Reparo de fiação e leitura de módulo</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Tenho%20um%20ve%C3%ADculo%20Peugeot/Renault/Citro%C3%ABn%20e%20preciso%20de%20ajuda%20no%20c%C3%A2mbio." target="_blank" class="w-full py-2.5 rounded-xl bg-brand-dark border border-brand-border text-center text-xs font-bold text-brand-orange hover:bg-brand-orange hover:text-white transition relative z-10">
+                        ESPECIALISTA AL4 / DP0
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS SECTION (Now with Oficina Image) -->
+    <section id="diferenciais" class="py-20 bg-brand-dark border-t border-b border-brand-border/50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-orange font-tech text-lg tracking-widest font-bold uppercase">Por Que Nos Escolher</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-tech text-white uppercase tracking-tight">
+                        Por que a Seven Câmbio é a Preferida de Guaianases e SP?
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Compromisso com o cliente em primeiro lugar. Construímos nossa reputação baseados na ética, honestidade e entrega no prazo combinado.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                        
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/50 border border-brand-border/50 hover:border-brand-orange/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Preço Justo Sem Surpresas</h4>
+                                <p class="text-[11px] text-gray-400 mt-1">Valores competitivos e orçamentos transparentes pré-aprovados.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/50 border border-brand-border/50 hover:border-brand-orange/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Atenção do Próprio Dono</h4>
+                                <p class="text-[11px] text-gray-400 mt-1">Atenção total ao seu problema até a solução completa.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/50 border border-brand-border/50 hover:border-brand-orange/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Sem "Mimimi" Técnico</h4>
+                                <p class="text-[11px] text-gray-400 mt-1">Explicamos o defeito de maneira simples e didática.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/50 border border-brand-border/50 hover:border-brand-orange/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Prazos Cumpridos</h4>
+                                <p class="text-[11px] text-gray-400 mt-1">Devolução do carro rigorosamente dentro do prazo pactuado.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Side: Image of the Workshop -->
+                <div class="lg:col-span-6 relative">
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-brand-orange/20 rounded-full blur-3xl z-0 pointer-events-none"></div>
+                    <div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card shadow-2xl group z-10">
+                        <img src="oficina-hero.webp" alt="Estrutura e Equipamentos da Oficina Seven Câmbio" class="w-full h-auto max-h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent flex flex-col justify-end p-6">
+                            <h3 class="font-tech text-2xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-certificate text-brand-orange"></i>
+                                Estrutura Completa
+                            </h3>
+                            <p class="text-xs text-gray-300 mt-2 max-w-sm">
+                                Equipamentos de ponta e espaço adequado para garantir o melhor diagnóstico e reparo do seu veículo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS SECTION -->
+    <section id="depoimentos" class="py-20 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-orange font-tech text-lg tracking-widest font-bold uppercase">Depoimentos Reais</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-tech text-white uppercase tracking-tight">
+                    O Que Dizem Nossos Clientes no Google
+                </h2>
+                <div class="flex items-center justify-center gap-2 text-sm text-gray-300 pt-1">
+                    <span class="font-bold text-white text-lg">4.5</span>
+                    <div class="flex text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="text-gray-400">(Baseado em 83 avaliações)</span>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1: Marcos Pannia -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between relative shadow-lg">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange font-bold text-sm">
+                                    MP
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Marcos Pannia</h4>
+                                    <span class="text-[11px] text-gray-400">Local Guide · Duster Oroch</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-xs text-gray-300 leading-relaxed italic">
+                            "Essa loja foi mandado minha Duster Oroch para arrumar meu câmbio... Agora eu posso dizer dessa loja está tentando resolver isso é muito pontos positivos e o dono da uma ótima atenção. Obrigado!"
+                        </p>
+
+                        <!-- Owner Response -->
+                        <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/60 space-y-1 mt-4">
+                            <span class="text-[11px] font-bold text-brand-orange block">Resposta do proprietário:</span>
+                            <p class="text-[11px] text-gray-400 leading-snug">
+                                "Ficamos felizes por ter proporcionado um ótimo atendimento a você Marcos, conte com a Seven Câmbio Automático!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2: Robson -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between relative shadow-lg">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange font-bold text-sm">
+                                    RO
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Robson</h4>
+                                    <span class="text-[11px] text-gray-400">Peugeot 307 (2010)</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-xs text-gray-300 leading-relaxed italic">
+                            "Levei meu carro pra arrumar o câmbio e gostei bastante do serviço. Foram bem claros explicando o que precisava fazer e não ficaram inventando coisa. O carro ficou ótimo depois, resolveu o problema mesmo. Entregaram dentro do prazo e o valor foi justo. Dá pra ver que os caras sabem o que estão fazendo. Recomendo!"
+                        </p>
+
+                        <!-- Owner Response -->
+                        <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/60 space-y-1 mt-4">
+                            <span class="text-[11px] font-bold text-brand-orange block">Resposta do proprietário:</span>
+                            <p class="text-[11px] text-gray-400 leading-snug">
+                                "Bom dia Sr. Robson! Ficamos felizes em proporcionar a você um excelente atendimento! Sempre que precisar conte com a Seven Câmbio Automático!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3: Edson Carvalho -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between relative shadow-lg">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange font-bold text-sm">
+                                    EC
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Edson Carvalho</h4>
+                                    <span class="text-[11px] text-gray-400">Local Guide · Câmbio AL4</span>
+                                </div>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-xs text-gray-300 leading-relaxed italic">
+                            "Precisava trocar o câmbio AL4 Peugeot, liguei tive o melhor orçamento, sem mimimi, sem novidades, recomendo, pelo menos paguei metade do valor de outros da região, procura o Robson!"
+                        </p>
+
+                        <!-- Owner Response -->
+                        <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/60 space-y-1 mt-4">
+                            <span class="text-[11px] font-bold text-brand-orange block">Resposta do proprietário:</span>
+                            <p class="text-[11px] text-gray-400 leading-snug">
+                                "Ficamos felizes por estar satisfeito com o nosso atendimento. Conte com a Seven Câmbio Automático."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Direct link to Google Reviews Profile -->
+            <div class="mt-12 text-center">
+                <a href="https://maps.google.com/?cid=7311838286661049391" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-card border border-brand-border hover:border-brand-orange/50 text-xs font-bold text-gray-200 hover:text-white transition shadow-md">
+                    <i class="fa-brands fa-google text-brand-orange text-base"></i>
+                    VER TODAS AS 83 AVALIAÇÕES NO GOOGLE MAPS
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO E CONTATO SECTION -->
+    <section id="localizacao" class="py-20 bg-brand-dark border-t border-brand-border/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-orange font-tech text-lg tracking-widest font-bold uppercase">Venha Nos Visitar</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-tech text-white uppercase tracking-tight">
+                    Localização & Horário de Atendimento
+                </h2>
+                <p class="text-gray-400 text-sm">
+                    Estamos localizados na Estr. do Lageado Velho em Guaianases, São Paulo - SP.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Info Cards Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Address Box -->
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4 shadow-lg">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Endereço</h4>
+                                <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+                                    Estrada do Lageado Velho, 1551<br>
+                                    Guaianases, São Paulo - SP<br>
+                                    CEP: 08451-000, Brasil
+                                </p>
+                                <span class="inline-block mt-2 text-[11px] text-gray-400 bg-brand-dark px-2.5 py-1 rounded border border-brand-border">
+                                    Código Plus: FJ84+G3 Guaianases, São Paulo
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Direction buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <a href="https://maps.google.com/?cid=7311838286661049391" target="_blank" class="py-2.5 px-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-orange/50 text-center text-xs font-bold text-gray-200 flex items-center justify-center gap-2 transition">
+                                <i class="fa-solid fa-route text-brand-orange"></i> Google Maps
+                            </a>
+                            <a href="https://waze.com/ul?q=Estrada%20do%20Lageado%20Velho%201551%20Guaianases" target="_blank" class="py-2.5 px-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-orange/50 text-center text-xs font-bold text-gray-200 flex items-center justify-center gap-2 transition">
+                                <i class="fa-solid fa-diamond-turn-right text-brand-orange"></i> Abrir no Waze
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hours Box -->
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3 shadow-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Horário de Funcionamento</h4>
+                                <span class="text-[11px] text-green-400 font-semibold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Aberto Hoje</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs divide-y divide-brand-border/40">
+                            <div class="flex justify-between pt-1">
+                                <span class="text-gray-400">Segunda a Quinta</span>
+                                <span class="text-white font-semibold">08:30 às 18:00</span>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <span class="text-gray-400">Sexta-feira</span>
+                                <span class="text-white font-semibold">08:30 às 17:00</span>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <span class="text-gray-400">Sábado e Domingo</span>
+                                <span class="text-gray-500 font-semibold">Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone & Social Box -->
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3 shadow-lg">
+                        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-headset text-brand-orange"></i>
+                            Canais de Atendimento
+                        </h4>
+                        
+                        <div class="space-y-2 pt-1">
+                            <a href="tel:+5511967871641" class="flex items-center gap-3 p-2.5 rounded-xl bg-brand-dark border border-brand-border/60 hover:border-brand-orange/50 text-xs text-gray-200 font-medium transition group">
+                                <i class="fa-brands fa-whatsapp text-brand-orange text-sm group-hover:scale-110 transition-transform"></i>
+                                <span>(11) 96787-1641 (WhatsApp / Celular)</span>
+                            </a>
+                            
+                            <a href="https://instagram.com/sevencambio.oficial" target="_blank" class="flex items-center gap-3 p-2.5 rounded-xl bg-brand-dark border border-brand-border/60 hover:border-brand-orange/50 text-xs text-gray-200 font-medium transition group">
+                                <i class="fa-brands fa-instagram text-brand-orange text-sm group-hover:scale-110 transition-transform"></i>
+                                <span>@sevencambio.oficial</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Embed Column -->
+                <div class="lg:col-span-7 h-full min-h-[420px] rounded-2xl overflow-hidden border border-brand-border shadow-2xl relative">
+                     <div class="absolute inset-0 pointer-events-none rounded-2xl border border-white/10 z-10"></div>
+                    <iframe 
+                        title="Mapa de Localização da Seven Câmbio Automático"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.487920199026!2d-46.39893!3d-23.55097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6457c10ee209%3A0x6578de2e93885c2f!2sEstr.%20do%20Lageado%20Velho%2C%201551%20-%20Guaianases%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008451-000!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                        class="w-full h-full min-h-[450px] border-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ SECTION WITH IMAGE -->
+    <section class="py-20 bg-brand-black border-t border-brand-border/40 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Image Column for FAQ -->
+                <div class="lg:col-span-5 hidden lg:block relative">
+                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-orange/20 rounded-full blur-[80px] pointer-events-none"></div>
+                    <img src="Dúvidas frequentes.png" alt="Especialista tirando dúvidas" class="w-full h-auto object-cover rounded-2xl shadow-2xl relative z-10 border border-brand-border">
+                </div>
+
+                <!-- FAQ Content Column -->
+                <div class="lg:col-span-7">
+                    <div class="mb-10 text-center lg:text-left">
+                        <span class="text-brand-orange font-tech text-sm font-bold uppercase tracking-widest">Tire Suas Dúvidas</span>
+                        <h3 class="font-tech text-3xl font-extrabold text-white uppercase mt-1">Perguntas Frequentes</h3>
+                        <p class="text-sm text-gray-400 mt-2">Nossos especialistas respondem às principais dúvidas sobre câmbio automático.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <details class="group bg-brand-card rounded-xl border border-brand-border p-4 [&_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-brand-orange/50">
+                            <summary class="flex items-center justify-between font-bold text-sm text-white cursor-pointer select-none outline-none">
+                                <span>De quanto em quanto tempo devo trocar o óleo do câmbio automático?</span>
+                                <span class="text-brand-orange group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="text-xs text-gray-400 mt-3 leading-relaxed animate-fade-in">
+                                Em geral, recomenda-se a verificação preventiva a cada 40.000 km a 60.000 km, dependendo do modelo do carro e do tipo de uso (severo ou urbano). Mesmo marcas que dizem ser "fluido vitalício" se beneficiam enormemente da substituição periódica para evitar desgastes prematuros.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 2 -->
+                        <details class="group bg-brand-card rounded-xl border border-brand-border p-4 [&_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-brand-orange/50">
+                            <summary class="flex items-center justify-between font-bold text-sm text-white cursor-pointer select-none outline-none">
+                                <span>O carro começou a dar tranco na marcha a ré ou em reduzida. O que pode ser?</span>
+                                <span class="text-brand-orange group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="text-xs text-gray-400 mt-3 leading-relaxed animate-fade-in">
+                                Trancos costumam sinalizar variação de pressão no corpo de válvulas, solenoides com desgaste ou óleo degradado com perda de viscosidade. Em transmissões AL4 e DP0, por exemplo, o reparo de solenoides e atualização costuma resolver sem necessidade de abrir toda a caixa.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 3 -->
+                        <details class="group bg-brand-card rounded-xl border border-brand-border p-4 [&_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-brand-orange/50">
+                            <summary class="flex items-center justify-between font-bold text-sm text-white cursor-pointer select-none outline-none">
+                                <span>Qual a diferença entre troca parcial e troca completa (Flushing)?</span>
+                                <span class="text-brand-orange group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="text-xs text-gray-400 mt-3 leading-relaxed animate-fade-in">
+                                A troca parcial (feita por gravidade) substitui apenas cerca de 40% a 50% do fluido, pois o resto fica preso no conversor de torque. O flushing com máquina computadorizada realiza a troca por diálise, substituindo 100% do óleo velho por óleo novo de forma segura e eficiente.
+                            </p>
+                        </details>
+
+                        <!-- FAQ Item 4 -->
+                        <details class="group bg-brand-card rounded-xl border border-brand-border p-4 [&_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-brand-orange/50">
+                            <summary class="flex items-center justify-between font-bold text-sm text-white cursor-pointer select-none outline-none">
+                                <span>Vocês oferecem garantia nos serviços realizados?</span>
+                                <span class="text-brand-orange group-open:rotate-180 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="text-xs text-gray-400 mt-3 leading-relaxed animate-fade-in">
+                                Sim, com certeza! Todos os nossos serviços de manutenção e as peças aplicadas possuem garantia formal descrita na ordem de serviço, garantindo total tranquilidade e segurança para você.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4 md:col-span-1 flex flex-col items-start">
+                     <img src="Seven Automatic Transmission Racing Logo.png" alt="Seven Câmbio Automático Logo" class="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity filter brightness-110">
+                    <p class="text-xs text-gray-400 leading-relaxed mt-2">
+                        Especialista em manutenção de transmissão automática, diagnóstico computadorizado e troca de fluido em São Paulo.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-white tracking-wider mb-4">Links Rápidos</h5>
+                    <ul class="space-y-2.5 text-xs text-gray-400">
+                        <li><a href="#hero" class="hover:text-brand-orange transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-[10px]"></i> Início</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-orange transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-[10px]"></i> Sobre Nós</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-orange transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-[10px]"></i> Nossos Serviços</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-orange transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-[10px]"></i> Diferenciais</a></li>
+                        <li><a href="#depoimentos" class="hover:text-brand-orange transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-[10px]"></i> Avaliações Google</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-white tracking-wider mb-4">Principais Marcas</h5>
+                    <ul class="space-y-2.5 text-xs text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange/60"></i> Peugeot / Citroën (AL4)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange/60"></i> Renault (DP0, DP2)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange/60"></i> Honda & Toyota (CVT)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange/60"></i> Ford (PowerShift)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange/60"></i> Volkswagen (DSG, Tiptronic)</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase text-white tracking-wider mb-4">Atendimento</h5>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4 flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot mt-0.5 text-brand-orange/80"></i>
+                        <span>Estrada do Lageado Velho, 1551<br>Guaianases - São Paulo - SP</span>
+                    </p>
+                    <a href="tel:+5511967871641" class="text-sm font-bold text-brand-orange flex items-center gap-2 hover:text-brand-orangeLight transition-colors">
+                        <i class="fa-brands fa-whatsapp"></i> (11) 96787-1641
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-border/60 pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span>© <span id="current-year"></span> Seven Câmbio Automático. Todos os direitos reservados.</span>
+                <span>Oficina Especializada em Transmissão Automática · Guaianases - SP</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5511967871641?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Seven%20C%C3%A2mbio%20e%20gostaria%20de%20fazer%20uma%20consulta." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 pulse-whatsapp bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110"
+       aria-label="Falar no WhatsApp com Seven Câmbio">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- Online dot indicator -->
+        <span class="absolute top-0 right-0 w-4 h-4 bg-green-300 border-2 border-brand-black rounded-full animate-ping"></span>
+        <span class="absolute top-0 right-0 w-4 h-4 bg-green-400 border-2 border-brand-black rounded-full"></span>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        menuIcon.className = 'fa-solid fa-bars text-2xl';
+                    } else {
+                        menuIcon.className = 'fa-solid fa-xmark text-2xl';
+                    }
+                });
+
+                // Close mobile menu when clicking nav links
+                const mobileLinks = document.querySelectorAll('.mobile-link');
+                mobileLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.className = 'fa-solid fa-bars text-2xl';
+                    });
+                });
+            }
+
+            // Navbar scroll background intensity
+            const navbar = document.getElementById('main-navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-xl', 'bg-brand-dark');
+                } else {
+                    navbar.classList.remove('shadow-xl');
+                }
+            });
+        });
+
+        // Function for sending diagnostic wizard input directly to WhatsApp
+        function sendWizardToWhatsApp() {
+            const brand = document.getElementById('wizard-brand').value;
+            const symptom = document.getElementById('wizard-symptom').value;
+            const model = document.getElementById('wizard-model').value.trim();
+
+            let textMessage = `Olá! Gostaria de um pré-diagnóstico/orçamento para o meu veículo na Seven Câmbio:\n\n`;
+            textMessage += `🚗 *Marca:* ${brand}\n`;
+            if (model) {
+                textMessage += `🚘 *Modelo/Ano:* ${model}\n`;
+            }
+            textMessage += `⚠️ *Sintoma/Serviço:* ${symptom}\n\n`;
+            textMessage += `Poderiam me orientar sobre os próximos passos?`;
+
+            const encodedText = encodeURIComponent(textMessage);
+            const whatsappUrl = `https://wa.me/5511967871641?text=${encodedText}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
